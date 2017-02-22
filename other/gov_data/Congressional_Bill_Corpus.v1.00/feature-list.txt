@@ -1,0 +1,68 @@
+** feature-list.txt **
+
+Note: All features, unless otherwise noted, are binary indicator features.
+
+1.  Metadata information on the referred committees and the bill sponsors:
+
+- "data-introduced-year_X"
+The bill is introduced in the Xth year of the given congressional session.
+
+- "mj-party-congress_R"
+The bill is introduced to the Republican majority congress.
+
+- "district_XX"
+The bill sponsor represents a district in the state XX.
+
+- "data-introduced-month_X"
+The bill is introduced in the month X.
+
+- "sponsor-in-majority_1"
+The bill sponsor is in the majority party of the congress.
+
+- "sponsor-party_X"
+The bill's sponsor is affiliated with the party X.
+
+- "sponsor-in-committee_1"
+The bill's sponsor is a member of at least one of the referred committees.
+
+- "sponsor-chaired-referred-committee_1"
+The bill's sponsor chaired at least one of the referred committees.
+
+- "sponsor-in-committee_majority_1"
+The bill's sponsor is a majority member of at least one of the referred committees.
+
+- "sponsor_id_XXXX_XX"
+The bill's sponsor is congressman XXXX from state XX. (E.g., "sponsor_id_walsh-james-t_ny" for James T. Walsh from New York.)
+
+- "sponsor_id_XXXX_XX_in-cmtt-and-majority_1"
+The bill's sponsor is congressman XXXX from state XX, and he/she is a majority member of at least one of the referred committees.
+
+- "sponsor_id_XXXX_XX_in-cmtt-and-minority_1"
+The bill's sponsor is congressman XXXX from state XX, and he/she is a minority member of at least one of the referred committees.
+
+- "sponsor_id_XXXX_XX_notin-cmtt-and-majority_1"
+The bill's sponsor is congressman XXXX from state XX, and he/she is NOT a member of any of the referred committees during the congress which the bill was introduced, and he/seh is affiliated by majority party.
+
+- "sponsor_id_XXXX_XX_notin-cmtt-and-minority_1"
+The bill's sponsor is congressman XXXX from state XX, and he/she is NOT a member of any of the referred committees during the congress which the bill was introduced, and he/she is NOT affiliated by majority party.
+
+- sponsor_id_XXXX_XX_sponsor-chaired-referred-committee_1
+The bill's sponsor is congressman XXXX from state XX, and he/she is a chairman of at least one of the referred committees.
+
+2.  Textual features:
+
+- "bill_cat4-function-YY_XX"
+The bill is labeled as XX by a functional bill classifier YY. Four types of labels are: "00" (not in class YY), "10" (in class YY with >.5 probability), "01" (uncertain, with >.3 probability) "02" (uncertain, with >.4 probability). YY includes the three types of classifiers: "CQ" (critical, or importnat bills), "RECUR" (bills dealing with recurring matters), and "TRIV" (bills dealing with trivial matters). 
+
+- "sim_YY_XXXX"
+The bill scored at XXXX by "proxy-vote" similarity measurement. The scores here is a discretized version of the actual measurement, which is continuous. YY includes the three types of proxy-vote measurements: "allmember" (consider all committee members' preference) "chaironly" (consider only chairman's preference), and "majorp" (consider only major party member's preference).
+
+- "sim_rate_YY_XXXX"
+The same as above, except that the score is refactored by the "dissimilarity" measurment. 
+
+- "body-word_XXXX"
+The bill includes the term XXXX in its text.  Terms can be n-grams.
+
+- "title-word_XXXX"
+The bill includes the term XXXX in its title.  Terms can be n-grams.
+

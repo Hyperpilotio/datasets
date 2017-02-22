@@ -1,0 +1,3 @@
+Congressional Bill Corpus
+
+1.0	2012-05-14  Congressional Bill data and house committee decision results between 103rd and 111th congress. This set was used for all the experiments reported in the NAACL 2012 paper.
